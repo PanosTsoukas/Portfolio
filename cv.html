@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Panagiotis Tsoukas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Smooth Scroll and jQuery Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <header class="nav-header">
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CV Display Section with Smooth Fade-in Effect -->
+    <section id="cv" class="content-section" style="margin-top: 80px;">
+        <div class="cv-display">
+            <!-- Embed the PDF file with a fade-in effect -->
+            <embed id="cv-pdf" src="CV.pdf" type="application/pdf" width="100%" height="800px" style="opacity: 0; transition: opacity 1.5s ease-in;" />
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-portfolio">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/panagiotis-tsoukas-4a61a3321/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:panagiotis.tria@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/PanosTsoukas" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="footer-lock">&copy; 2024 Panagiotis Tsoukas. All rights reserved.</p>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        // Smooth scroll for navigation
+        $(document).ready(function () {
+            $('a[href*="#"]').on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 500, 'linear');
+            });
+
+            // Fade-in effect for the embedded CV PDF
+            $('#cv-pdf').on('load', function() {
+                $(this).css('opacity', '1');
+            });
+        });
+    </script>
+
+</body>
+</html>

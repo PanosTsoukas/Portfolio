@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panagiotis Tsoukas - Professional Portfolio</title>
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box !important;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: table;
+            width: 100%;
+            height: 100%;
+            background-color: #171717;
+            color: #000;
+            line-height: 1.6;
+            position: relative;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        /* Lines Background */
+        .lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            margin: auto;
+            width: 90vw;
+        }
+
+        .line {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .line::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 15vh;
+            width: 100%;
+            top: -50%;
+            left: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+            animation: drop 7s 0s infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+        }
+
+        .line:nth-child(1) {
+            margin-left: -25%;
+        }
+        .line:nth-child(1)::after {
+            animation-delay: 2s;
+        }
+
+        .line:nth-child(3) {
+            margin-left: 25%;
+        }
+        .line:nth-child(3)::after {
+            animation-delay: 2.5s;
+        }
+
+        /* Keyframe Animation */
+        @keyframes drop {
+            0% {
+                top: -50%;
+            }
+            100% {
+                top: 110%;
+            }
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-icon {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #00adb5;
+            margin-bottom: 20px;
+        }
+
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00adb5;
+        }
+
+        .intro p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        /* Scroll Icon Button */
+        .scroll-icon {
+            margin-top: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .scroll-icon a {
+            display: inline-block;
+            background-color: #00adb5;
+            border-radius: 50px;
+            padding: 15px;
+            color: #ffffff;
+            font-size: 2rem;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-icon a:hover {
+            background-color: #007e8c;
+        }
+
+        .scroll-icon i {
+            display: inline-block;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+            z-index: 10;
+            position: relative;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #f0f0f0;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #00adb5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Line Background -->
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Profile Image -->
+        <div class="profile-icon">
+            <img src="me.jpg" alt="Panagiotis Tsoukas">
+        </div>
+
+        <!-- Intro Text -->
+        <div class="intro">
+            <h1>Hi, I'm <span class="highlight">Panagiotis</span></h1>
+            <p>Engineer, Developer, Technologist</p>
+        </div>
+
+        <!-- Scroll Button -->
+        <div class="scroll-icon">
+            <a href="about.html" class="cta-button">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/panagiotis-tsoukas-4a61a3321/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:panagiotis.tria@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/PanosTsoukas" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="footer-lock">&copy; 2024 Panagiotis Tsoukas. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

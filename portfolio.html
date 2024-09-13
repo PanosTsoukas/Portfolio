@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Panagiotis Tsoukas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <header class="nav-header">
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section" style="margin-top: 40px;">
+        <div class="portfolio-grid-flex">
+
+            <!-- Project 1: Training Spiking Neural Networks -->
+            <div class="project-card">
+                <div class="project-details">
+                    <h3>Training Spiking Neural Networks</h3>
+                    <p>This project explores the difficulties in training spiking neural networks, focusing on efficient learning algorithms to improve brain-inspired AI systems.</p>
+                    <p><strong>Technologies:</strong> PyTorch, Machine Learning, Neuromorphic Computing</p>
+                    <a href="https://github.com/PanosTsoukas/spiking-neural-networks" class="btn" target="_blank">View on GitHub</a>
+                    <button class="btn modal-btn" data-modal="modal1">More Details</button>
+                </div>
+            </div>
+            
+            <!-- Project 2: Blood Donation App -->
+            <div class="project-card">
+                <div class="project-details">
+                    <h3>Blood Donation App</h3>
+                    <p>A fully functional app that keeps track of volunteers' details and updates the national blood bank system database, applicable to every Greek hospital.</p>
+                    <p><strong>Technologies:</strong> SQL, Java (JDBC), Database Connectivity</p>
+                    <a href="https://github.com/PanosTsoukas/blood-donation-app" class="btn" target="_blank">View on GitHub</a>
+                    <button class="btn modal-btn" data-modal="modal2">More Details</button>
+                </div>
+            </div>
+
+            <!-- Project 3: Agrojason Project -->
+            <div class="project-card">
+                <div class="project-details">
+                    <h3>Agrojason Project</h3>
+                    <p>A backend development project using MongoDB, Python, and Angular for managing agricultural data and workflows.</p>
+                    <p><strong>Technologies:</strong> MongoDB, Python, Angular</p>
+                    <a href="https://github.com/PanosTsoukas/agrojason-project" class="btn" target="_blank">View on GitHub</a>
+                    <button class="btn modal-btn" data-modal="modal3">More Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section" style="margin-top: 30px;">
+            <h2>Skills</h2>
+            <div class="skills-grid" style="margin-top: 10px;">
+                <div class="skills-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Programming: C, C++, Java, Javascript, Go, Python</li>
+                        <li>Markup: HTML, LaTeX</li>
+                        <li>Scripting: Bash, Matlab, R</li>
+                        <li>Spoken: Greek, English</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>SQL: PostgreSQL, MySQL</li>
+                        <li>NoSQL: MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>Web: Flask, React</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-portfolio">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/panagiotis-tsoukas-4a61a3321/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:panagiotis.tria@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/PanosTsoukas" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="footer-lock">&copy; 2024 Panagiotis Tsoukas. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
